@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyapolmr0l3ml"]
+
+[ext_resource type="Script" path="res://deplete_button.gd" id="1_v42n7"]
+
+[node name="Deplete Button" type="Button"]
+z_index = 2
+z_as_relative = false
+offset_right = 49.0
+offset_bottom = 8.0
+text = "I smell pennies"
+script = ExtResource("1_v42n7")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

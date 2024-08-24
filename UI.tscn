@@ -1,0 +1,246 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpy8cmu1su3sx"]
+
+[ext_resource type="Texture2D" uid="uid://dosqel634sd7o" path="res://Chrono PreAlpha UI.png" id="1_2oylp"]
+[ext_resource type="Script" path="res://UI.gd" id="1_30h8c"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_30h8c")
+
+[node name="ChronoPreAlphaUi" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(800, 450)
+texture = ExtResource("1_2oylp")
+metadata/_edit_lock_ = true
+
+[node name="p2attacktoken" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 315.0
+offset_top = 396.0
+offset_right = 379.0
+offset_bottom = 451.0
+color = Color(0.0470588, 1, 0, 1)
+
+[node name="p1attacktoken" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 315.0
+offset_top = 451.0
+offset_right = 379.0
+offset_bottom = 506.0
+color = Color(0.937255, 0, 0, 1)
+
+[node name="Player2" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 346.0
+offset_right = 119.0
+offset_bottom = 386.0
+text = "Player 2"
+
+[node name="Player1" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 522.0
+offset_right = 119.0
+offset_bottom = 562.0
+text = "Player 1"
+
+[node name="Timeline" type="RichTextLabel" parent="."]
+offset_left = 162.0
+offset_top = 401.0
+offset_right = 300.0
+offset_bottom = 441.0
+text = "Timeline: None"
+
+[node name="p2health" type="RichTextLabel" parent="."]
+offset_left = 8.0
+offset_top = 402.0
+offset_right = 146.0
+offset_bottom = 448.0
+text = "Health:
+20"
+fit_content = true
+
+[node name="p1health" type="RichTextLabel" parent="."]
+offset_left = 8.0
+offset_top = 458.0
+offset_right = 146.0
+offset_bottom = 504.0
+text = "Health:
+20"
+fit_content = true
+
+[node name="p2energy" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(80, 40)
+offset_left = 189.0
+offset_top = 341.0
+offset_right = 269.0
+offset_bottom = 381.0
+scale = Vector2(1.02, 1)
+text = "Energy: 1"
+scroll_active = false
+
+[node name="p2energyReserve" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(160, 40)
+offset_left = 189.0
+offset_top = 360.0
+offset_right = 349.0
+offset_bottom = 400.0
+scale = Vector2(1.02, 1)
+text = "Energy Reserve: 3"
+scroll_active = false
+
+[node name="p1energy" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(80, 40)
+offset_left = 189.0
+offset_top = 512.0
+offset_right = 269.0
+offset_bottom = 552.0
+scale = Vector2(1.02, 1)
+text = "Energy: 1"
+scroll_active = false
+
+[node name="p1energyReserve" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(160, 40)
+offset_left = 189.0
+offset_top = 529.0
+offset_right = 349.0
+offset_bottom = 569.0
+scale = Vector2(1.02, 1)
+text = "Energy Reserve: 3"
+scroll_active = false
+
+[node name="Hand" type="HBoxContainer" parent="."]
+offset_left = 539.0
+offset_top = 968.0
+offset_right = 1439.0
+offset_bottom = 1008.0
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="OpponentHand" type="HBoxContainer" parent="."]
+offset_left = 1434.0
+offset_top = -67.0
+offset_right = 2334.0
+offset_bottom = -27.0
+rotation = 3.14159
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="p1Diver1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 102.0
+offset_top = 738.0
+offset_right = 142.0
+offset_bottom = 778.0
+
+[node name="p1Diver2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 280.0
+offset_top = 738.0
+offset_right = 320.0
+offset_bottom = 778.0
+
+[node name="p2Diver1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 102.0
+offset_top = 160.0
+offset_right = 142.0
+offset_bottom = 200.0
+
+[node name="p2Diver2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 280.0
+offset_top = 160.0
+offset_right = 320.0
+offset_bottom = 200.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 70.0
+offset_top = 397.0
+offset_right = 137.0
+offset_bottom = 504.0
+text = "Confirm"
+
+[node name="p1battlefield" type="HBoxContainer" parent="."]
+offset_left = 492.0
+offset_top = 711.0
+offset_right = 1492.0
+offset_bottom = 751.0
+theme_override_constants/separation = 200
+
+[node name="Attacking" type="HBoxContainer" parent="."]
+offset_left = 492.0
+offset_top = 575.0
+offset_right = 1492.0
+offset_bottom = 615.0
+theme_override_constants/separation = 200
+alignment = 1
+
+[node name="p2battfield2" type="HBoxContainer" parent="."]
+offset_left = 1490.0
+offset_top = 199.0
+offset_right = 2490.0
+offset_bottom = 239.0
+rotation = 3.14159
+theme_override_constants/separation = 200
+alignment = 2
+
+[node name="Blocking" type="HBoxContainer" parent="."]
+offset_left = 492.0
+offset_top = 327.0
+offset_right = 1492.0
+offset_bottom = 367.0
+theme_override_constants/separation = 200
+alignment = 1
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(200, 60)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Queue" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 990.0
+offset_top = 450.0
+offset_right = 1030.0
+offset_bottom = 490.0
+
+[node name="Active Player" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(400, 0)
+offset_top = 576.0
+offset_right = 40.0
+offset_bottom = 616.0
+text = "Active Player: "
+
+[node name="Zoom" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 200.0
+offset_top = 450.0
+offset_right = 200.0
+offset_bottom = 490.0
+scale = Vector2(2, 2)
+
+[node name="Mulligan" type="HBoxContainer" parent="."]
+offset_left = 550.0
+offset_top = 432.0
+offset_right = 1450.0
+offset_bottom = 472.0
+theme_override_constants/separation = 300
+alignment = 1
+
+[node name="Chain" type="HBoxContainer" parent="."]
+offset_left = 648.0
+offset_top = 456.0
+offset_right = 3398.0
+offset_bottom = 496.0
+scale = Vector2(0.25, 0.25)
+theme_override_constants/separation = 250
+alignment = 1
+
+[connection signal="pressed" from="Player2" to="." method="_on_player_2_pressed"]
+[connection signal="pressed" from="Player1" to="." method="_on_player_1_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

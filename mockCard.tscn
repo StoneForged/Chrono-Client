@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://dabnkukhjllcv"]
+
+[ext_resource type="Texture2D" uid="uid://bnogg0jb8dm4h" path="res://Card Art/Cardback.jpg" id="1_8we2v"]
+[ext_resource type="Script" path="res://mockCard.gd" id="1_h7odx"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+script = ExtResource("1_h7odx")
+
+[node name="Art" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -88.0
+offset_top = -122.5
+offset_right = 287.0
+offset_bottom = 402.5
+scale = Vector2(0.47, 0.47)
+mouse_filter = 1
+texture_normal = ExtResource("1_8we2v")
+
+[node name="Strength" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = -55.0
+offset_top = 80.0
+offset_right = -15.0
+offset_bottom = 120.0
+text = "1"
+
+[node name="Durability" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 80.0
+offset_right = 95.0
+offset_bottom = 120.0
+text = "1"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="button_down" from="Art" to="." method="_on_art_button_down"]
+[connection signal="pressed" from="Art" to="." method="_on_art_pressed"]

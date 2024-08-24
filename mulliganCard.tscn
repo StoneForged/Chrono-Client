@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://u7mhsciisffr"]
+
+[ext_resource type="Script" path="res://mulliganCard.gd" id="1_6tmqm"]
+[ext_resource type="Texture2D" uid="uid://bwuk6iaa1rmqy" path="res://Card Art/7.jpg" id="2_xffl8"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6tmqm")
+
+[node name="Art" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -121.0
+offset_top = -160.0
+offset_right = 119.0
+offset_bottom = 176.0
+texture_normal = ExtResource("2_xffl8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -119.0
+offset_top = -162.0
+offset_right = 119.0
+offset_bottom = 178.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.639216)
+
+[connection signal="pressed" from="Art" to="." method="_on_texture_button_pressed"]

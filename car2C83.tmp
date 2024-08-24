@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dctoidv1klolw"]
+
+[ext_resource type="Script" path="res://card.gd" id="1_8r6k1"]
+[ext_resource type="Texture2D" uid="uid://4atgdoqk3hkm" path="res://Card Art/9.jpg" id="2_o7bjd"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8r6k1")
+
+[node name="Art" type="TextureButton" parent="."]
+layout_mode = 1
+offset_left = -88.0
+offset_top = -122.5
+offset_right = 152.0
+offset_bottom = 213.5
+scale = Vector2(0.73, 0.73)
+texture_normal = ExtResource("2_o7bjd")
+stretch_mode = 3
+
+[connection signal="button_down" from="Art" to="." method="_on_sprite_2d_button_down"]
+[connection signal="button_up" from="Art" to="." method="_on_sprite_2d_button_up"]
+[connection signal="mouse_entered" from="Art" to="." method="_on_sprite_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Art" to="." method="_on_sprite_2d_mouse_exited"]
